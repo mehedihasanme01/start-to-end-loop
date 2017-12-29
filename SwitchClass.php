@@ -9,14 +9,13 @@
 class SwitchClass
 {
       function myLogic($data){
-          echo '<pre>';
-          print_r($_POST);
+
 
           $btnr = $data['radio_btn'];
           $firstNumber = $data['first_number'];
           $lastNumber = $data['sec_number'];
           $submitVal = $data['btn'];
-          $result = '';
+          $result = ' ';
 
           switch ($btnr){
 
@@ -24,47 +23,45 @@ class SwitchClass
               case 'odd':
                   if ($firstNumber < $lastNumber) {
                       for ($x = $firstNumber; $x <= $lastNumber; $x++) {
-                          $result = $x . ' ';
-                          //echo $result;
 
-                          if(($result % 2 != 0)) {//$result = ($result % 2 != 0);
-                              echo $result;
+
+                          if(($x % 2 != 0)) {//$result = ($result % 2 != 0);
+
+                              $result .= $x.' ';
                           }
                       }
 
                   }else{
                       for ($x = $firstNumber; $x >= $lastNumber; $x--) {
-                          $result = $x . ' ';
-                          if(($result % 2 != 0)) {//$result = ($result % 2 != 0);
-                              echo $result;
+                          if(($x % 2 != 0)) {
+                               $result .=$x.' ';
                           }
                       }
                   }
 
-                  //$odd = ($num % 2 != 0);
+
                   break;
 
               case 'even':
                   if ($firstNumber < $lastNumber) {
                       for ($x = $firstNumber; $x <= $lastNumber; $x++) {
-                          $result = $x . ' ';
 
-//                          echo $result;
-                          if(($result % 2 == 0)){
-                              echo $result;
+                          if(($x % 2 == 0)){
+
+                              $result .=$x.' ';
                           }
 
 
                       }}else{
                       for ($x = $firstNumber; $x >= $lastNumber; $x--) {
-                          $result = $x . ' ';
-//                          echo $result;
-                          if(($result % 2 == 0)){
-                              echo $result;
+
+                          if(($x % 2 == 0)){
+
+                              $result .= $x.' ';
                           }
                       }
                   }
-                  //$even = ($num % 2 == 0);
+
                   break;
 
 

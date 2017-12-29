@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 $result = '';
 
 if (isset($_POST['btn'])){
@@ -35,12 +36,12 @@ if (isset($_POST['btn'])){
                 <table>
                     <tr>
                         <th>Enter First Number &nbsp;&nbsp; </th>
-                        <td><input type="number" name="first_number" class="form-control"> </td>
+                        <td><input type="number" name="first_number" class="form-control" value="<?php echo $_POST['first_number']; ?>"> </td>
                     </tr>
 
                     <tr>
                         <th>Enter Sec Number &nbsp;&nbsp; </th>
-                        <td><input type="number" name="sec_number" class="form-control"> </td>
+                        <td><input type="number" name="sec_number" class="form-control" value="<?php echo $_POST['sec_number']; ?>"> </td>
 
                     </tr>
 
