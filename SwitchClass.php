@@ -17,6 +17,22 @@ class SwitchClass
           $submitVal = $data['btn'];
           $result = ' ';
 
+          if ($firstNumber < $lastNumber) {
+              for ($x = $firstNumber; $x <= $lastNumber; $x++) {
+                      $result .= $x.' ';
+                  }
+              }
+
+          else{
+              for ($x = $firstNumber; $x >= $lastNumber; $x--) {
+
+                      $result .=$x.' ';
+                  }
+              }
+
+
+
+
           switch ($btnr){
 
 
@@ -70,5 +86,7 @@ class SwitchClass
           }
 
 return $result;
+
       }
+
 }
